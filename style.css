@@ -146,12 +146,7 @@ header.scrolled {
   .hero .about {
     font-size: 28px !important;
   }
-  .aeroplane {
-    width: 350px !important;
-    height: 350px !important;
-    top: -1% !important;
-    left: -21% !important;
-  }
+
   .my-skills {
     padding-bottom: 0 !important;
   }
@@ -165,10 +160,11 @@ header.scrolled {
   }
 
   .pyramid-design {
+    top: -12% !important;
     left: 43% !important;
   }
   .pyramid-design img {
-    width: 230px !important;
-    height: 230px !important;
+    width: 190px !important;
+    height: 190px !important;
   }
 }
