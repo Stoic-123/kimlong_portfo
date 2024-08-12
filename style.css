@@ -54,7 +54,18 @@ header.scrolled {
   margin: 0;
   background-color: rgb(30, 86, 255);
 }
-
+.clock {
+  position: absolute;
+  top: 1%;
+  left: 20%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #17d4fe;
+  font-size: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  z-index: 4;
+  letter-spacing: 7px;
+}
 .my-skills .type-skill .chart-skill .lang-skill {
   margin-left: 20px;
   color: white;
@@ -132,7 +143,7 @@ header.scrolled {
   .aeroplane {
     width: 600px !important;
     height: 600px !important;
-    top: -2.5% !important;
+    top: -2% !important;
     left: -18% !important;
   }
   .my-skills {
@@ -166,5 +177,19 @@ header.scrolled {
   .pyramid-design img {
     width: 190px !important;
     height: 190px !important;
+  }
+  .clock {
+    top: 0.4%;
+    left: 56%;
+    width: 80%;
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .clock {
+    top: 0.5%;
+    left: 55%;
+    width: 80%;
+    font-size: 30px;
   }
 }
