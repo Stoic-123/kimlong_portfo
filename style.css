@@ -92,6 +92,9 @@ header.scrolled {
   align-items: center;
   position: relative;
 }
+.footer_name_folder h1 {
+  font-size: 130px;
+}
 .footer_name_folder div {
   display: inline-block;
   padding-left: 15%;
@@ -111,6 +114,7 @@ header.scrolled {
     transform: translateX(-100%);
   }
 }
+
 @media only screen and (max-width: 1200px) {
   .aeroplane {
     width: 650px !important;
@@ -149,6 +153,9 @@ header.scrolled {
   .my-skills {
     padding-bottom: 0 !important;
   }
+  .footer_name_folder h1 {
+    font-size: 100px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .hero .name {
@@ -156,6 +163,9 @@ header.scrolled {
   }
   .hero .about {
     font-size: 28px !important;
+  }
+  .footer_name_folder h1 {
+    font-size: 60px;
   }
 
   .my-skills {

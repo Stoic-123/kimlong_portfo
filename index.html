@@ -15,6 +15,8 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -60,7 +62,9 @@
                   >
                 </li>
                 <li class="nav-item py-4 py-lg-0">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="https://linktr.ee/stoic123"
+                    >Contact</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">About Me</a>
@@ -86,6 +90,8 @@
           ></div>
           <div class="row flex-lg-row flex-column-reverse align-items-center">
             <div
+              data-aos="fade-right"
+              data-aos-delay="120"
               class="col-12 col-lg-6 text-white position-relative mt-5 mt-lg-0 mb-3 mb-lg-0"
             >
               <h1
@@ -101,12 +107,13 @@
                   <span class="auto-type" style="color: #1cff46"></span>
                 </h2>
               </div>
-              <button
+              <a
+                href="pdf/cv.pdf"
                 type="button"
                 class="btn-resume btn btn-primary btn-lg py-3 px-4 rounded-5"
               >
                 Download Resume
-              </button>
+              </a>
               <div
                 class="pyramid-design position-absolute z-0 end-md-0"
                 style="right: 23%; top: -19%"
@@ -117,7 +124,11 @@
                 />
               </div>
             </div>
-            <div class="col-12 col-lg-6 z-2 pt-5 pt-lg-0">
+            <div
+              data-aos="fade-down"
+              data-aos-delay="120"
+              class="col-12 col-lg-6 z-2 pt-5 pt-lg-0"
+            >
               <img
                 src="img/profile.png"
                 class="img-fluid"
@@ -129,6 +140,8 @@
             class="col-12 col-lg-6 text-white text-center mx-auto d-block py-5"
           >
             <h1
+              data-aos="zoom-in"
+              data-aos-delay="200"
               class="about"
               style="
                 font-size: 40px;
@@ -148,7 +161,11 @@
       <section>
         <div class="container my-5">
           <div class="row">
-            <div class="col-12 col-lg-4">
+            <div
+              data-aos="fade-down"
+              data-aos-delay="180"
+              class="col-12 col-lg-4"
+            >
               <div class="card bg-transparent border-0">
                 <div class="card-body">
                   <img style="width: 130px" src="img/coding.png" alt="" />
@@ -160,7 +177,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-4">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="180"
+              class="col-12 col-lg-4"
+            >
               <div class="card bg-transparent border-0">
                 <div class="card-body">
                   <img style="width: 130px" src="img/content-icon.png" alt="" />
@@ -173,7 +194,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-4">
+            <div
+              data-aos="fade-down"
+              data-aos-delay="180"
+              class="col-12 col-lg-4"
+            >
               <div class="card bg-transparent border-0">
                 <div class="card-body">
                   <img style="width: 130px" src="img/designer.png" alt="" />
@@ -188,18 +213,14 @@
           </div>
         </div>
       </section>
-      <section
-        class="my-skills position-relative"
-        style="padding-bottom: 350px"
-      >
-        <spline-viewer
-          class="position-absolute d-none d-lg-block z-1"
-          style="bottom: -30%"
-          url="https://prod.spline.design/zJjLDY99FxdhbhDw/scene.splinecode"
-        ></spline-viewer>
+      <section class="my-skills position-relative">
         <div class="container my-5 pt-3">
           <div class="row">
-            <div class="col-12 col-lg-6 pb-4 pb-lg-0">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="180"
+              class="col-12 col-lg-6 pb-4 pb-lg-0"
+            >
               <div class="skill-text">
                 <h2 class="text-white fw-bold">Skills I proudly possess</h2>
                 <p class="text-light">
@@ -212,7 +233,11 @@
                 </p>
               </div>
             </div>
-            <div class="col-12 col-lg-6">
+            <div
+              data-aos="zoom-in-up"
+              data-aos-delay="200"
+              class="col-12 col-lg-6"
+            >
               <div class="type-skill">
                 <div class="chart-skill" data-skill-width="70%">
                   <div class="lang-skill">
@@ -285,10 +310,18 @@
           </h1>
 
           <div class="row my-5 pt-5 border-bottom pb-5">
-            <div class="col-12 col-lg-6">
+            <div
+              data-aos="fade-down"
+              data-aos-delay="180"
+              class="col-12 col-lg-6"
+            >
               <img class="w-100" src="img/art1.png" alt="" />
             </div>
-            <div class="col-12 col-lg-6">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="180"
+              class="col-12 col-lg-6"
+            >
               <div class="py-4 py-lg-0">
                 <h2 class="text-white fs-1">Graphic Design</h2>
                 <p class="text-secondary fs-4">Photoshop</p>
@@ -302,14 +335,22 @@
       <section class="project">
         <div class="container">
           <div class="row my-5 pt-5 border-bottom pb-5">
-            <div class="col-12 col-lg-6">
+            <div
+              data-aos="fade-down"
+              data-aos-delay="180"
+              class="col-12 col-lg-6"
+            >
               <img class="w-100" src="img/web1.png" alt="" />
               <div class="py-4 py-lg-0 mt-lg-4">
                 <h2 class="text-white fs-1">Web Development</h2>
                 <p class="text-secondary fs-4">Solo Works</p>
               </div>
             </div>
-            <div class="col-12 col-lg-6 mt-lg-5 pt-lg-2">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="180"
+              class="col-12 col-lg-6 mt-lg-5 pt-lg-2"
+            >
               <img class="w-100" src="img/web2.png" alt="" />
             </div>
           </div>
@@ -319,10 +360,18 @@
       <section class="project">
         <div class="container">
           <div class="row my-5 pt-5 pb-5">
-            <div class="col-12 col-lg-6">
+            <div
+              data-aos="fade-down"
+              data-aos-delay="180"
+              class="col-12 col-lg-6"
+            >
               <img class="w-100" src="img/web3.png" alt="" />
             </div>
-            <div class="col-12 col-lg-6">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="180"
+              class="col-12 col-lg-6"
+            >
               <div class="py-4 py-lg-0">
                 <h2 class="text-white fs-1">Web Development</h2>
                 <p class="text-secondary fs-4">Team Works</p>
@@ -512,7 +561,10 @@
 
       showTime();
     </script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script
       type="module"
       src="https://unpkg.com/@splinetool/viewer@1.9.6/build/spline-viewer.js"
