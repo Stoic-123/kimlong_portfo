@@ -15,8 +15,6 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -62,9 +60,7 @@
                   >
                 </li>
                 <li class="nav-item py-4 py-lg-0">
-                  <a class="nav-link" href="https://linktr.ee/stoic123"
-                    >Contact</a
-                  >
+                  <a class="nav-link" href="#">Contact</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">About Me</a>
@@ -76,22 +72,12 @@
       </nav>
     </header>
     <main class="position-relative">
-      <spline-viewer
-        class="aeroplane position-absolute z-1 d-none d-md-block"
-        style="width: 700px; height: 700px; left: 25.5%; top: -3%"
-        url="https://prod.spline.design/IicpaeGKJNOcYOlM/scene.splinecode"
-      ></spline-viewer>
-      <section class="hero">
-        <div class="container">
-          <div
-            id="MyClockDisplay"
-            class="d-block d-md-none clock"
-            onload="showTime()"
-          ></div>
+      <section id="home" class="hero">
+        <div id="particles-js"></div>
+
+        <div class="container hero-content">
           <div class="row flex-lg-row flex-column-reverse align-items-center">
             <div
-              data-aos="fade-right"
-              data-aos-delay="120"
               class="col-12 col-lg-6 text-white position-relative mt-5 mt-lg-0 mb-3 mb-lg-0"
             >
               <h1
@@ -107,13 +93,12 @@
                   <span class="auto-type" style="color: #1cff46"></span>
                 </h2>
               </div>
-              <a
-                href="pdf/cv.pdf"
+              <button
                 type="button"
-                class="btn-resume btn btn-primary btn-lg py-3 px-4 rounded-5"
+                class="btn-resume col-12 col-md-auto btn btn-primary btn-lg py-3 px-4 rounded-5"
               >
                 Download Resume
-              </a>
+              </button>
               <div
                 class="pyramid-design position-absolute z-0 end-md-0"
                 style="right: 23%; top: -19%"
@@ -124,11 +109,7 @@
                 />
               </div>
             </div>
-            <div
-              data-aos="fade-down"
-              data-aos-delay="120"
-              class="col-12 col-lg-6 z-2 pt-5 pt-lg-0"
-            >
+            <div class="col-12 col-lg-6 z-2 pt-5 pt-md-0">
               <img
                 src="img/profile.png"
                 class="img-fluid"
@@ -140,8 +121,6 @@
             class="col-12 col-lg-6 text-white text-center mx-auto d-block py-5"
           >
             <h1
-              data-aos="zoom-in"
-              data-aos-delay="200"
               class="about"
               style="
                 font-size: 40px;
@@ -153,7 +132,7 @@
               <br />
               I'M A SOPHOMORE STUDENT IN MAJORING SOFTWARE DEVELOPMENT. <br />
               <br />
-              I'M ALSO A TIKTOKER THAT IS SHARING ABOUT KNOWLEDGE AND EDUCATION.
+              I'M ALSO A TIKTOKER THAT SHARING ABOUT KNOWLEDGE AND EDUCATION.
             </h1>
           </div>
         </div>
@@ -161,14 +140,14 @@
       <section>
         <div class="container my-5">
           <div class="row">
-            <div
-              data-aos="fade-down"
-              data-aos-delay="180"
-              class="col-12 col-lg-4"
-            >
+            <div class="col-12 col-lg-4">
               <div class="card bg-transparent border-0">
                 <div class="card-body">
-                  <img style="width: 130px" src="img/coding.png" alt="" />
+                  <img
+                    style="width: 130px"
+                    src="http://127.0.0.1:5500/img/content-icon.png"
+                    alt=""
+                  />
                   <h2 class="text-white">Junior Web Developer</h2>
                   <p class="text-secondary fs-5">
                     I'm a Junior Web Developer that Study at Norton University
@@ -177,14 +156,14 @@
                 </div>
               </div>
             </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="180"
-              class="col-12 col-lg-4"
-            >
+            <div class="col-12 col-lg-4">
               <div class="card bg-transparent border-0">
                 <div class="card-body">
-                  <img style="width: 130px" src="img/content-icon.png" alt="" />
+                  <img
+                    style="width: 130px"
+                    src="http://127.0.0.1:5500/img/coding.png"
+                    alt=""
+                  />
                   <h2 class="text-white">TIK TOKER</h2>
                   <p class="text-secondary fs-5">
                     Sharing about education to student in Cambodia by making
@@ -194,14 +173,14 @@
                 </div>
               </div>
             </div>
-            <div
-              data-aos="fade-down"
-              data-aos-delay="180"
-              class="col-12 col-lg-4"
-            >
+            <div class="col-12 col-lg-4">
               <div class="card bg-transparent border-0">
                 <div class="card-body">
-                  <img style="width: 130px" src="img/designer.png" alt="" />
+                  <img
+                    style="width: 130px"
+                    src="http://127.0.0.1:5500/img/designer.png"
+                    alt=""
+                  />
                   <h2 class="text-white">Junior Graphic Designer</h2>
                   <p class="text-secondary fs-5">
                     I'm a Junior Graphic Designer of Photoshop that study at
@@ -216,11 +195,7 @@
       <section class="my-skills position-relative">
         <div class="container my-5 pt-3">
           <div class="row">
-            <div
-              data-aos="fade-right"
-              data-aos-delay="180"
-              class="col-12 col-lg-6 pb-4 pb-lg-0"
-            >
+            <div class="col-12 col-lg-6 pb-4 pb-lg-0">
               <div class="skill-text">
                 <h2 class="text-white fw-bold">Skills I proudly possess</h2>
                 <p class="text-light">
@@ -233,11 +208,7 @@
                 </p>
               </div>
             </div>
-            <div
-              data-aos="zoom-in-up"
-              data-aos-delay="200"
-              class="col-12 col-lg-6"
-            >
+            <div class="col-12 col-lg-6">
               <div class="type-skill">
                 <div class="chart-skill" data-skill-width="70%">
                   <div class="lang-skill">
@@ -310,18 +281,10 @@
           </h1>
 
           <div class="row my-5 pt-5 border-bottom pb-5">
-            <div
-              data-aos="fade-down"
-              data-aos-delay="180"
-              class="col-12 col-lg-6"
-            >
+            <div class="col-12 col-lg-6">
               <img class="w-100" src="img/art1.png" alt="" />
             </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="180"
-              class="col-12 col-lg-6"
-            >
+            <div class="col-12 col-lg-6">
               <div class="py-4 py-lg-0">
                 <h2 class="text-white fs-1">Graphic Design</h2>
                 <p class="text-secondary fs-4">Photoshop</p>
@@ -335,22 +298,14 @@
       <section class="project">
         <div class="container">
           <div class="row my-5 pt-5 border-bottom pb-5">
-            <div
-              data-aos="fade-down"
-              data-aos-delay="180"
-              class="col-12 col-lg-6"
-            >
+            <div class="col-12 col-lg-6">
               <img class="w-100" src="img/web1.png" alt="" />
               <div class="py-4 py-lg-0 mt-lg-4">
                 <h2 class="text-white fs-1">Web Development</h2>
                 <p class="text-secondary fs-4">Solo Works</p>
               </div>
             </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="180"
-              class="col-12 col-lg-6 mt-lg-5 pt-lg-2"
-            >
+            <div class="col-12 col-lg-6 mt-lg-5 pt-lg-2">
               <img class="w-100" src="img/web2.png" alt="" />
             </div>
           </div>
@@ -360,18 +315,10 @@
       <section class="project">
         <div class="container">
           <div class="row my-5 pt-5 pb-5">
-            <div
-              data-aos="fade-down"
-              data-aos-delay="180"
-              class="col-12 col-lg-6"
-            >
+            <div class="col-12 col-lg-6">
               <img class="w-100" src="img/web3.png" alt="" />
             </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="180"
-              class="col-12 col-lg-6"
-            >
+            <div class="col-12 col-lg-6">
               <div class="py-4 py-lg-0">
                 <h2 class="text-white fs-1">Web Development</h2>
                 <p class="text-secondary fs-4">Team Works</p>
@@ -381,7 +328,10 @@
           </div>
         </div>
       </section>
-      <section class="my-4" style="background-color: #1cff46; height: 330px">
+      <section
+        class="my-4 text-dark"
+        style="background-color: #74d81d; height: 330px"
+      >
         <div class="container">
           <div class="py-5">
             <h1 class="display-1 fw-bold">CONTACT ME! I'M BROKE NOW..!</h1>
@@ -411,7 +361,7 @@
           </div>
         </div>
       </div>
-      <div class="footer_name_folder bg-white py-5 mt-4">
+      <div class="footer_name_folder text-black bg-white py-5 mt-4">
         <div class="footer-name_1">
           <h1 class="display-1 fw-bold">IENG KIMLONG</h1>
         </div>
@@ -424,6 +374,12 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script>
       var typed = new Typed(".auto-type", {
         strings: ["KIMLONG", "A DEVELOPER", "A DESIGNER", "A TIKTOKER"],
@@ -431,8 +387,6 @@
         backSpeed: 110,
         loop: true,
       });
-    </script>
-    <script>
       document.addEventListener("DOMContentLoaded", function () {
         const header = document.getElementById("header");
 
@@ -454,6 +408,54 @@
       });
     </script>
     <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: false },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+          modes: {
+            grab: { distance: 400, line_linked: { opacity: 1 } },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: { distance: 200, duration: 0.4 },
+            push: { particles_nb: 4 },
+            remove: { particles_nb: 2 },
+          },
+        },
+        retina_detect: true,
+      });
+
       document.addEventListener("DOMContentLoaded", () => {
         const skills = document.querySelectorAll(".chart-skill");
 
@@ -501,13 +503,6 @@
           requestAnimationFrame(increaseWidth);
         }
       });
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script>
       document.addEventListener("DOMContentLoaded", function () {
         const letTalkSection = document.getElementById("let-talk");
 
@@ -531,40 +526,7 @@
         });
       });
     </script>
-    <script>
-      function showTime() {
-        var date = new Date();
-        var h = date.getHours(); // 0 - 23
-        var m = date.getMinutes(); // 0 - 59
-        var s = date.getSeconds(); // 0 - 59
-        var session = "AM";
 
-        if (h == 0) {
-          h = 12;
-        }
-
-        if (h > 12) {
-          h = h - 12;
-          session = "PM";
-        }
-
-        h = h < 10 ? "0" + h : h;
-        m = m < 10 ? "0" + m : m;
-        s = s < 10 ? "0" + s : s;
-
-        var time = h + ":" + m + ":" + s + " " + session;
-        document.getElementById("MyClockDisplay").innerText = time;
-        document.getElementById("MyClockDisplay").textContent = time;
-
-        setTimeout(showTime, 1000);
-      }
-
-      showTime();
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
     <script
       type="module"
       src="https://unpkg.com/@splinetool/viewer@1.9.6/build/spline-viewer.js"
