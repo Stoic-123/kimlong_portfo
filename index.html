@@ -15,6 +15,8 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -60,7 +62,9 @@
                   >
                 </li>
                 <li class="nav-item py-4 py-lg-0">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="https://linktr.ee/stoic123"
+                    >Contact</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">About Me</a>
@@ -74,10 +78,16 @@
     <main class="position-relative">
       <section id="home" class="hero">
         <div id="particles-js"></div>
-
-        <div class="container hero-content">
+        <div class="container">
+          <div
+            id="MyClockDisplay"
+            class="d-block d-md-none clock pt-5"
+            onload="showTime()"
+          ></div>
           <div class="row flex-lg-row flex-column-reverse align-items-center">
             <div
+              data-aos="fade-right"
+              data-aos-delay="120"
               class="col-12 col-lg-6 text-white position-relative mt-5 mt-lg-0 mb-3 mb-lg-0"
             >
               <h1
@@ -93,12 +103,13 @@
                   <span class="auto-type" style="color: #1cff46"></span>
                 </h2>
               </div>
-              <button
+              <a
+                href="pdf/cv.pdf"
                 type="button"
-                class="btn-resume col-12 col-md-auto btn btn-primary btn-lg py-3 px-4 rounded-5"
+                class="btn-resume btn btn-primary btn-lg py-3 px-4 rounded-5"
               >
                 Download Resume
-              </button>
+              </a>
               <div
                 class="pyramid-design position-absolute z-0 end-md-0"
                 style="right: 23%; top: -19%"
@@ -109,7 +120,11 @@
                 />
               </div>
             </div>
-            <div class="col-12 col-lg-6 z-2 pt-5 pt-md-0">
+            <div
+              data-aos="fade-down"
+              data-aos-delay="120"
+              class="col-12 col-lg-6 z-2 pt-5 pt-lg-0"
+            >
               <img
                 src="img/profile.png"
                 class="img-fluid"
@@ -121,6 +136,8 @@
             class="col-12 col-lg-6 text-white text-center mx-auto d-block py-5"
           >
             <h1
+              data-aos="zoom-in"
+              data-aos-delay="200"
               class="about"
               style="
                 font-size: 40px;
@@ -132,7 +149,7 @@
               <br />
               I'M A SOPHOMORE STUDENT IN MAJORING SOFTWARE DEVELOPMENT. <br />
               <br />
-              I'M ALSO A TIKTOKER THAT SHARING ABOUT KNOWLEDGE AND EDUCATION.
+              I'M ALSO A TIKTOKER THAT IS SHARING ABOUT KNOWLEDGE AND EDUCATION.
             </h1>
           </div>
         </div>
@@ -140,14 +157,14 @@
       <section>
         <div class="container my-5">
           <div class="row">
-            <div class="col-12 col-lg-4">
+            <div
+              data-aos="fade-down"
+              data-aos-delay="180"
+              class="col-12 col-lg-4"
+            >
               <div class="card bg-transparent border-0">
                 <div class="card-body">
-                  <img
-                    style="width: 130px"
-                    src="http://127.0.0.1:5500/img/content-icon.png"
-                    alt=""
-                  />
+                  <img style="width: 130px" src="img/coding.png" alt="" />
                   <h2 class="text-white">Junior Web Developer</h2>
                   <p class="text-secondary fs-5">
                     I'm a Junior Web Developer that Study at Norton University
@@ -156,14 +173,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-4">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="180"
+              class="col-12 col-lg-4"
+            >
               <div class="card bg-transparent border-0">
                 <div class="card-body">
-                  <img
-                    style="width: 130px"
-                    src="http://127.0.0.1:5500/img/coding.png"
-                    alt=""
-                  />
+                  <img style="width: 130px" src="img/content-icon.png" alt="" />
                   <h2 class="text-white">TIK TOKER</h2>
                   <p class="text-secondary fs-5">
                     Sharing about education to student in Cambodia by making
@@ -173,14 +190,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-4">
+            <div
+              data-aos="fade-down"
+              data-aos-delay="180"
+              class="col-12 col-lg-4"
+            >
               <div class="card bg-transparent border-0">
                 <div class="card-body">
-                  <img
-                    style="width: 130px"
-                    src="http://127.0.0.1:5500/img/designer.png"
-                    alt=""
-                  />
+                  <img style="width: 130px" src="img/designer.png" alt="" />
                   <h2 class="text-white">Junior Graphic Designer</h2>
                   <p class="text-secondary fs-5">
                     I'm a Junior Graphic Designer of Photoshop that study at
@@ -195,7 +212,11 @@
       <section class="my-skills position-relative">
         <div class="container my-5 pt-3">
           <div class="row">
-            <div class="col-12 col-lg-6 pb-4 pb-lg-0">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="180"
+              class="col-12 col-lg-6 pb-4 pb-lg-0"
+            >
               <div class="skill-text">
                 <h2 class="text-white fw-bold">Skills I proudly possess</h2>
                 <p class="text-light">
@@ -208,7 +229,11 @@
                 </p>
               </div>
             </div>
-            <div class="col-12 col-lg-6">
+            <div
+              data-aos="zoom-in-up"
+              data-aos-delay="200"
+              class="col-12 col-lg-6"
+            >
               <div class="type-skill">
                 <div class="chart-skill" data-skill-width="70%">
                   <div class="lang-skill">
@@ -281,10 +306,18 @@
           </h1>
 
           <div class="row my-5 pt-5 border-bottom pb-5">
-            <div class="col-12 col-lg-6">
+            <div
+              data-aos="fade-down"
+              data-aos-delay="180"
+              class="col-12 col-lg-6"
+            >
               <img class="w-100" src="img/art1.png" alt="" />
             </div>
-            <div class="col-12 col-lg-6">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="180"
+              class="col-12 col-lg-6"
+            >
               <div class="py-4 py-lg-0">
                 <h2 class="text-white fs-1">Graphic Design</h2>
                 <p class="text-secondary fs-4">Photoshop</p>
@@ -298,14 +331,22 @@
       <section class="project">
         <div class="container">
           <div class="row my-5 pt-5 border-bottom pb-5">
-            <div class="col-12 col-lg-6">
+            <div
+              data-aos="fade-down"
+              data-aos-delay="180"
+              class="col-12 col-lg-6"
+            >
               <img class="w-100" src="img/web1.png" alt="" />
               <div class="py-4 py-lg-0 mt-lg-4">
                 <h2 class="text-white fs-1">Web Development</h2>
                 <p class="text-secondary fs-4">Solo Works</p>
               </div>
             </div>
-            <div class="col-12 col-lg-6 mt-lg-5 pt-lg-2">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="180"
+              class="col-12 col-lg-6 mt-lg-5 pt-lg-2"
+            >
               <img class="w-100" src="img/web2.png" alt="" />
             </div>
           </div>
@@ -315,10 +356,18 @@
       <section class="project">
         <div class="container">
           <div class="row my-5 pt-5 pb-5">
-            <div class="col-12 col-lg-6">
+            <div
+              data-aos="fade-down"
+              data-aos-delay="180"
+              class="col-12 col-lg-6"
+            >
               <img class="w-100" src="img/web3.png" alt="" />
             </div>
-            <div class="col-12 col-lg-6">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="180"
+              class="col-12 col-lg-6"
+            >
               <div class="py-4 py-lg-0">
                 <h2 class="text-white fs-1">Web Development</h2>
                 <p class="text-secondary fs-4">Team Works</p>
@@ -328,10 +377,7 @@
           </div>
         </div>
       </section>
-      <section
-        class="my-4 text-dark"
-        style="background-color: #74d81d; height: 330px"
-      >
+      <section class="my-4" style="background-color: #1cff46; height: 330px">
         <div class="container">
           <div class="py-5">
             <h1 class="display-1 fw-bold">CONTACT ME! I'M BROKE NOW..!</h1>
@@ -361,7 +407,7 @@
           </div>
         </div>
       </div>
-      <div class="footer_name_folder text-black bg-white py-5 mt-4">
+      <div class="footer_name_folder bg-white py-5 mt-4">
         <div class="footer-name_1">
           <h1 class="display-1 fw-bold">IENG KIMLONG</h1>
         </div>
@@ -380,7 +426,67 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      AOS.init();
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.6/build/spline-viewer.js"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const letTalkSection = document.getElementById("let-talk");
+
+        // Parallax effect
+        window.addEventListener("mousemove", function (e) {
+          const mouseX = e.clientX;
+          const mouseY = e.clientY;
+
+          const windowWidth = window.innerWidth;
+          const windowHeight = window.innerHeight;
+
+          const xOffset = (mouseX / windowWidth) * 20 - 10; // Range between -10 and 10
+          const yOffset = (mouseY / windowHeight) * 20 - 10; // Range between -10 and 10
+
+          letTalkSection.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+        });
+
+        // Reset position on mouse leave
+        letTalkSection.addEventListener("mouseleave", function () {
+          letTalkSection.style.transform = "translate(0, 0)";
+        });
+      });
+    </script>
+    <script>
+      function showTime() {
+        var date = new Date();
+        var h = date.getHours(); // 0 - 23
+        var m = date.getMinutes(); // 0 - 59
+        var s = date.getSeconds(); // 0 - 59
+        var session = "AM";
+
+        if (h == 0) {
+          h = 12;
+        }
+
+        if (h > 12) {
+          h = h - 12;
+          session = "PM";
+        }
+
+        h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+
+        var time = h + ":" + m + ":" + s + " " + session;
+        document.getElementById("MyClockDisplay").innerText = time;
+        document.getElementById("MyClockDisplay").textContent = time;
+
+        setTimeout(showTime, 1000);
+      }
+
+      showTime();
       var typed = new Typed(".auto-type", {
         strings: ["KIMLONG", "A DEVELOPER", "A DESIGNER", "A TIKTOKER"],
         typeSpeed: 110,
@@ -526,10 +632,5 @@
         });
       });
     </script>
-
-    <script
-      type="module"
-      src="https://unpkg.com/@splinetool/viewer@1.9.6/build/spline-viewer.js"
-    ></script>
   </body>
 </html>
