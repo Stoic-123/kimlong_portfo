@@ -251,23 +251,12 @@ html {
   position: relative;
 }
 
+/* Project section responsive improvements */
 .project .col-12 .project-container {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 15px;
-}
-
-/* Special styling for graphic design projects */
-.project .col-12 .project-container.graphic-design:hover img {
-  transform: scale(1.05);
-  /* No filter or overlay for graphic design projects */
-}
-
-/* Regular styling for web projects */
-.project .col-12 .project-container:not(.graphic-design):hover img {
-  transform: scale(1.05);
-  filter: brightness(0.7);
 }
 
 .project .col-12 .project-overlay {
@@ -276,7 +265,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(28, 255, 70, 0.2);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -284,17 +273,18 @@ html {
   opacity: 0;
   transition: all 0.3s ease;
   z-index: 2;
-  backdrop-filter: blur(3px);
+  padding: 15px;
+  text-align: center;
 }
 
-/* Only show overlay on non-graphic design projects */
-.project .col-12 .project-container:not(.graphic-design):hover .project-overlay {
+.project .col-12 .project-container:hover .project-overlay {
   opacity: 1;
+  backdrop-filter: blur(3px);
 }
 
 .project .col-12 .project-overlay h3 {
   color: white;
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
   font-weight: 700;
   margin-bottom: 15px;
   transform: translateY(20px);
@@ -303,22 +293,24 @@ html {
 
 .project .col-12 .project-overlay p {
   color: #e0e0e0;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
   margin-bottom: 20px;
   transform: translateY(20px);
   transition: all 0.4s ease 0.1s;
+  max-width: 90%;
 }
 
 .project .col-12 .project-overlay .btn-view-project {
   background-color: #1cff46;
   color: #000;
   border: none;
-  padding: 10px 25px;
+  padding: clamp(8px, 2vw, 10px) clamp(15px, 4vw, 25px);
   border-radius: 30px;
   font-weight: 600;
   transform: translateY(20px);
   transition: all 0.4s ease 0.2s;
   text-decoration: none;
+  font-size: clamp(0.9rem, 3vw, 1rem);
 }
 
 .project .col-12 .project-overlay .btn-view-project:hover {
@@ -327,10 +319,68 @@ html {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.project .col-12 .project-container:not(.graphic-design):hover .project-overlay h3,
-.project .col-12 .project-container:not(.graphic-design):hover .project-overlay p,
-.project .col-12 .project-container:not(.graphic-design):hover .project-overlay .btn-view-project {
+.project .col-12 .project-container:hover .project-overlay h3,
+.project .col-12 .project-container:hover .project-overlay p,
+.project .col-12 .project-container:hover .project-overlay .btn-view-project {
   transform: translateY(0);
+}
+
+/* Special styling for graphic design projects */
+.project .col-12 .project-container.graphic-design:hover img {
+  transform: scale(1.05);
+}
+
+/* Regular styling for web projects */
+.project .col-12 .project-container:not(.graphic-design):hover img {
+  transform: scale(1.05);
+  filter: brightness(0.7);
+}
+
+/* Media queries for better responsive behavior */
+@media (max-width: 768px) {
+  .project .col-12 .project-overlay {
+    padding: 10px;
+  }
+  
+  .project .col-12 .project-overlay p {
+    margin-bottom: 15px;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+  .project .col-12 .project-overlay h3 {
+    margin-bottom: 10px;
+  }
+  
+  .project .col-12 .project-overlay p {
+    margin-bottom: 12px;
+  }
+  
+  .project .col-12 .project-overlay .btn-view-project {
+    padding: 6px 15px;
+  }
+}
+
+/* Touch device improvements */
+@media (hover: none) {
+  .project .col-12 .project-overlay {
+    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(70%);
+    height: 50%;
+  }
+  
+  .project .col-12 .project-overlay h3,
+  .project .col-12 .project-overlay p,
+  .project .col-12 .project-overlay .btn-view-project {
+    transform: translateY(0);
+  }
+  
+  .project .col-12 .project-container:active .project-overlay {
+    transform: translateY(0);
+    height: 100%;
+  }
 }
 @keyframes scrollText {
   0% {
@@ -612,4 +662,11 @@ html {
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+
+/* Add this to your CSS for the JavaScript enhancement */
+.project .col-12 .project-container.active-overlay .project-overlay {
+  opacity: 1;
+  transform: translateY(0);
+  height: 100%;
 }

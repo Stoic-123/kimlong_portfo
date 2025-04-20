@@ -246,3 +246,39 @@ document.addEventListener("DOMContentLoaded", function () {
             });
           });
   });
+  // Add this to your existing script.js file
+  document.addEventListener("DOMContentLoaded", function() {
+    // Check if device is touch-enabled
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    if (isTouchDevice) {
+      const projectContainers = document.querySelectorAll('.project-container:not(.graphic-design)');
+      
+      projectContainers.forEach(container => {
+        // For touch devices, make first tap show overlay, second tap follow link
+        container.addEventListener('click', function(e) {
+          const overlay = this.querySelector('.project-overlay');
+          const link = overlay.querySelector('.btn-view-project');
+          
+          // If the overlay is not fully visible yet, show it and prevent link navigation
+          if (!this.classList.contains('active-overlay')) {
+            e.preventDefault();
+            // Remove active class from all other containers
+            projectContainers.forEach(c => c.classList.remove('active-overlay'));
+            // Add active class to current container
+            this.classList.add('active-overlay');
+          } else if (e.target !== link) {
+            // If clicking anywhere on the overlay except the button, prevent navigation
+            e.preventDefault();
+          }
+        });
+      });
+      
+      // Close overlay when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.project-container')) {
+          projectContainers.forEach(c => c.classList.remove('active-overlay'));
+        }
+      });
+    }
+  });
