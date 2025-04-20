@@ -57,17 +57,20 @@
             <div class="offcanvas-body" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
+                  <a class="nav-link active" aria-current="page" href="#home">Home</a>
                 </li>
                 <li class="nav-item py-4 py-lg-0">
-                  <a class="nav-link" href="https://linktr.ee/stoic123"
-                    >Contact</a
-                  >
+                  <a class="nav-link" href="#skills">Skills</a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About Me</a>
+                  <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
                 </li>
               </ul>
             </div>
@@ -209,7 +212,7 @@
           </div>
         </div>
       </section>
-      <section class="my-skills position-relative">
+      <section class="my-skills position-relative" id="skills">
         <div class="container my-5 pt-3">
           <div class="row">
             <div
@@ -299,7 +302,7 @@
         </div>
       </section>
 
-      <section class="project position-relative z-3 bg-dark">
+      <section class="project position-relative z-3 bg-dark" id="projects">
         <div class="container">
           <h1 class="text-center text-white py-3 display-3 fw-bold">
             FEATURED WORK
@@ -311,7 +314,10 @@
               data-aos-delay="180"
               class="col-12 col-lg-6"
             >
-              <img class="w-100" src="img/art1.png" alt="" />
+              <!-- Graphic design project without overlay -->
+              <div class="project-container graphic-design">
+                <img class="w-100" src="img/art1.png" alt="Graphic Design Project" />
+              </div>
             </div>
             <div
               data-aos="fade-up"
@@ -323,7 +329,10 @@
                 <p class="text-secondary fs-4">Photoshop</p>
               </div>
 
-              <img class="w-100" src="img/art2.jpg" alt="" />
+              <!-- Graphic design project without overlay -->
+              <div class="project-container graphic-design">
+                <img class="w-100" src="img/art2.jpg" alt="Graphic Design Project" />
+              </div>
             </div>
           </div>
         </div>
@@ -336,7 +345,14 @@
               data-aos-delay="180"
               class="col-12 col-lg-6"
             >
-              <img class="w-100" src="img/web1.png" alt="" />
+              <div class="project-container">
+                <img class="w-100" src="img/web1.png" alt="Web Development Project" />
+                <div class="project-overlay">
+                  <h3>E-commerce Website</h3>
+                  <p>Responsive design with modern UI/UX</p>
+                  <a href="https://stoic-123.github.io/Online-Shop/" class="btn-view-project">View Full Project</a>
+                </div>
+              </div>
               <div class="py-4 py-lg-0 mt-lg-4">
                 <h2 class="text-white fs-1">Web Development</h2>
                 <p class="text-secondary fs-4">Solo Works</p>
@@ -347,7 +363,14 @@
               data-aos-delay="180"
               class="col-12 col-lg-6 mt-lg-5 pt-lg-2"
             >
-              <img class="w-100" src="img/web2.png" alt="" />
+              <div class="project-container">
+                <img class="w-100" src="img/web2.png" alt="Web Development Project" />
+                <div class="project-overlay">
+                  <h3>Chat Bot</h3>
+                  <p>A smart Khmer chat bot with a clean and modern interface</p>
+                  <a href="https://khmer-chat-bot.onrender.com/" class="btn-view-project">View Full Project</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -361,7 +384,15 @@
               data-aos-delay="180"
               class="col-12 col-lg-6"
             >
-              <img class="w-100" src="img/web3.png" alt="" />
+              <div class="project-container">
+                <img class="w-100" src="img/web3.png" alt="Web Development Project" />
+                <div class="project-overlay">
+                  <h3>laundry service ordering platform</h3>
+                  <p class="w-75 text-center">online laundry ordering system that allows users to
+                    request laundry services </p>
+                  <a href="http://antstudents.com/WenScholarshipBatch1/js/g9/index.html" class="btn-view-project">View Full Project</a>
+                </div>
+              </div>
             </div>
             <div
               data-aos="fade-up"
@@ -372,12 +403,70 @@
                 <h2 class="text-white fs-1">Web Development</h2>
                 <p class="text-secondary fs-4">Team Works</p>
               </div>
-              <img class="w-100" src="img/web4.png" alt="" />
+              <div class="project-container">
+                <img class="w-100" src="img/web4.png" alt="Web Development Project" />
+                <div class="project-overlay">
+                  <h3>E-learning Platform</h3>
+                  <p>Collaborative project with advanced features</p>
+                  <a href="http://antstudents.com/WebScholarship/Group-15/ProjectHTML/landing-page.html" class="btn-view-project">View Full Project</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="my-4" style="background-color: #1cff46; height: 330px">
+      <!-- Education Timeline Section -->
+      <section class="education-timeline py-5" id="education">
+        <div class="container">
+          <h1 class="text-center text-white py-3 display-3 fw-bold" data-aos="fade-down" data-aos-delay="100">
+            EDUCATION JOURNEY
+          </h1>
+          
+          <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="110">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2022 - Present</div>
+                <h3 class="timeline-title">Norton University, Phnom Penh</h3>
+                <p class="timeline-description">Bachelor of Science in Software Development</p>
+                <div class="timeline-details">
+                  <p>Focusing on full-stack development and modern programming paradigms. Participating in various coding competitions and hackathons.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item right" data-aos="fade-left" data-aos-delay="150">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2024 - 2025</div>
+                <h3 class="timeline-title">ANT Technology Training Center</h3>
+                <p class="timeline-description">Fullstack Development (1-Year Course)</p>
+                <div class="timeline-details">
+                  <p>MPTC & CRDB Funded Scholarship program focusing on comprehensive web development skills and industry practices.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2019 - 2022</div>
+                <h3 class="timeline-title">Hun Sen Khsach Kandal Highschool</h3>
+                <p class="timeline-description">Highschool Diploma</p>
+                <div class="timeline-details">
+                  <p>Excelled in mathematics and computer science courses. Participated in various technology clubs and competitions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="my-4" style="background-color: #1cff46; height: 330px" id="contact">
         <div class="container">
           <div class="py-5">
             <h1 class="display-1 fw-bold">CONTACT ME! I'M BROKE NOW..!</h1>
@@ -385,6 +474,8 @@
           </div>
         </div>
       </section>
+
+      
     </main>
     <footer class="pt-4">
       <div class="container py-5">
@@ -434,203 +525,6 @@
       type="module"
       src="https://unpkg.com/@splinetool/viewer@1.9.6/build/spline-viewer.js"
     ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const letTalkSection = document.getElementById("let-talk");
-
-        // Parallax effect
-        window.addEventListener("mousemove", function (e) {
-          const mouseX = e.clientX;
-          const mouseY = e.clientY;
-
-          const windowWidth = window.innerWidth;
-          const windowHeight = window.innerHeight;
-
-          const xOffset = (mouseX / windowWidth) * 20 - 10; // Range between -10 and 10
-          const yOffset = (mouseY / windowHeight) * 20 - 10; // Range between -10 and 10
-
-          letTalkSection.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
-        });
-
-        // Reset position on mouse leave
-        letTalkSection.addEventListener("mouseleave", function () {
-          letTalkSection.style.transform = "translate(0, 0)";
-        });
-      });
-    </script>
-    <script>
-      function showTime() {
-        var date = new Date();
-        var h = date.getHours(); // 0 - 23
-        var m = date.getMinutes(); // 0 - 59
-        var s = date.getSeconds(); // 0 - 59
-        var session = "AM";
-
-        if (h == 0) {
-          h = 12;
-        }
-
-        if (h > 12) {
-          h = h - 12;
-          session = "PM";
-        }
-
-        h = h < 10 ? "0" + h : h;
-        m = m < 10 ? "0" + m : m;
-        s = s < 10 ? "0" + s : s;
-
-        var time = h + ":" + m + ":" + s + " " + session;
-        document.getElementById("MyClockDisplay").innerText = time;
-        document.getElementById("MyClockDisplay").textContent = time;
-
-        setTimeout(showTime, 1000);
-      }
-
-      showTime();
-      var typed = new Typed(".auto-type", {
-        strings: ["KIMLONG", "A DEVELOPER", "A DESIGNER", "A TIKTOKER"],
-        typeSpeed: 110,
-        backSpeed: 110,
-        loop: true,
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        const header = document.getElementById("header");
-
-        window.addEventListener("scroll", function () {
-          if (window.scrollY === 0) {
-            header.classList.add("transparent");
-            header.classList.remove("scrolled");
-          } else {
-            header.classList.add("scrolled");
-            header.classList.remove("transparent");
-          }
-        });
-
-        if (window.scrollY === 0) {
-          header.classList.add("transparent");
-        } else {
-          header.classList.add("scrolled");
-        }
-      });
-    </script>
-    <script>
-      particlesJS("particles-js", {
-        particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: "#ffffff" },
-          shape: { type: "circle" },
-          opacity: { value: 0.5, random: false },
-          size: { value: 3, random: true },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#ffffff",
-            opacity: 0.4,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 6,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-          },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: { enable: true, mode: "repulse" },
-            onclick: { enable: true, mode: "push" },
-            resize: true,
-          },
-          modes: {
-            grab: { distance: 400, line_linked: { opacity: 1 } },
-            bubble: {
-              distance: 400,
-              size: 40,
-              duration: 2,
-              opacity: 8,
-              speed: 3,
-            },
-            repulse: { distance: 200, duration: 0.4 },
-            push: { particles_nb: 4 },
-            remove: { particles_nb: 2 },
-          },
-        },
-        retina_detect: true,
-      });
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const skills = document.querySelectorAll(".chart-skill");
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                const skillElement = entry.target;
-                const skillWidth = parseFloat(skillElement.dataset.skillWidth); // Parse width percentage
-                animateSkillWidth(skillElement, skillWidth); // Call animation function
-                observer.unobserve(skillElement); // Stop observing once the animation has triggered
-              }
-            });
-          },
-          {
-            threshold: 0.5, // Trigger when 50% of the element is visible
-          }
-        );
-
-        skills.forEach((skill) => {
-          skill.style.width = "0%"; // Initialize width to 0%
-          observer.observe(skill);
-        });
-
-        function animateSkillWidth(skillElement, widthPercentage) {
-          let currentWidth = 0;
-          const animationDuration = 1500; // Animation duration in milliseconds
-
-          function increaseWidth(timestamp) {
-            if (!skillElement.startTime) {
-              skillElement.startTime = timestamp;
-            }
-
-            const elapsed = timestamp - skillElement.startTime;
-            currentWidth = (elapsed / animationDuration) * widthPercentage;
-
-            if (currentWidth <= widthPercentage) {
-              skillElement.style.width = currentWidth + "%";
-              requestAnimationFrame(increaseWidth);
-            } else {
-              skillElement.style.width = widthPercentage + "%";
-            }
-          }
-
-          requestAnimationFrame(increaseWidth);
-        }
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        const letTalkSection = document.getElementById("let-talk");
-
-        // Parallax effect
-        window.addEventListener("mousemove", function (e) {
-          const mouseX = e.clientX;
-          const mouseY = e.clientY;
-
-          const windowWidth = window.innerWidth;
-          const windowHeight = window.innerHeight;
-
-          const xOffset = (mouseX / windowWidth) * 20 - 10; // Range between -10 and 10
-          const yOffset = (mouseY / windowHeight) * 20 - 10; // Range between -10 and 10
-
-          letTalkSection.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
-        });
-
-        // Reset position on mouse leave
-        letTalkSection.addEventListener("mouseleave", function () {
-          letTalkSection.style.transform = "translate(0, 0)";
-        });
-      });
-    </script>
+   <script src="script.js"></script>
   </body>
 </html>

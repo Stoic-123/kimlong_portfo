@@ -112,17 +112,66 @@ header.transparent {
 header.scrolled {
   background-color: #141414;
 }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Add this to your existing navbar styles */
+.navbar-nav .nav-item .nav-link.active {
+  color: #1cff46;
+  font-weight: bold;
+}
 .navbar-nav .nav-item .nav-link {
   font-size: 23px;
   border-radius: 30px;
-  transition: 0.4s;
-  padding: 0 20px !important;
+  transition: all 0.3s ease;
+  padding: 8px 20px !important;
+  position: relative;
+  color: #ffffff;
+  overflow: hidden;
+  z-index: 1;
 }
-.navbar .navbar-nav .nav-item .nav-link:hover {
-  padding: 5px 20px !important;
-  border-radius: 30px !important;
-  background-color: rgba(119, 136, 153, 0.509) !important;
+
+.navbar-nav .nav-item .nav-link:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(119, 136, 153, 0.3);
   border-radius: 30px;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.navbar-nav .nav-item .nav-link:hover:before {
+  width: 100%;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  color: #1cff46;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link.active:before {
+  background-color: rgba(28, 255, 70, 0.15);
+  width: 100%;
+}
+
+/* For mobile menu */
+.offcanvas .navbar-nav .nav-item {
+  margin: 5px 0;
+}
+
+.offcanvas .navbar-nav .nav-item .nav-link {
+  display: inline-block;
+}
+
+/* Remove the old hover style that was causing issues */
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  padding: 8px 20px !important;
 }
 .my-skills .skill-text h2 {
   font-size: 45px;
@@ -199,9 +248,89 @@ header.scrolled {
 }
 .project .col-12 img {
   transition: 0.25s ease;
+  position: relative;
 }
-.project .col-12 img:hover {
+
+.project .col-12 .project-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Special styling for graphic design projects */
+.project .col-12 .project-container.graphic-design:hover img {
   transform: scale(1.05);
+  /* No filter or overlay for graphic design projects */
+}
+
+/* Regular styling for web projects */
+.project .col-12 .project-container:not(.graphic-design):hover img {
+  transform: scale(1.05);
+  filter: brightness(0.7);
+}
+
+.project .col-12 .project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 255, 70, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+  backdrop-filter: blur(3px);
+}
+
+/* Only show overlay on non-graphic design projects */
+.project .col-12 .project-container:not(.graphic-design):hover .project-overlay {
+  opacity: 1;
+}
+
+.project .col-12 .project-overlay h3 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+.project .col-12 .project-overlay p {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  transform: translateY(20px);
+  transition: all 0.4s ease 0.1s;
+}
+
+.project .col-12 .project-overlay .btn-view-project {
+  background-color: #1cff46;
+  color: #000;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transform: translateY(20px);
+  transition: all 0.4s ease 0.2s;
+  text-decoration: none;
+}
+
+.project .col-12 .project-overlay .btn-view-project:hover {
+  background-color: #fff;
+  transform: translateY(15px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project .col-12 .project-container:not(.graphic-design):hover .project-overlay h3,
+.project .col-12 .project-container:not(.graphic-design):hover .project-overlay p,
+.project .col-12 .project-container:not(.graphic-design):hover .project-overlay .btn-view-project {
+  transform: translateY(0);
 }
 @keyframes scrollText {
   0% {
@@ -298,5 +427,189 @@ header.scrolled {
     left: 55%;
     width: 80%;
     font-size: 30px;
+  }
+}
+
+/* Education Timeline Section */
+.education-timeline {
+  position: relative;
+  padding: 60px 0;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.timeline-line {
+  position: absolute;
+  width: 6px;
+  background-color: #1cff46;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(28, 255, 70, 0.5);
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12.5px;
+  background-color: #1cff46;
+  border-radius: 50%;
+  top: 15px;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(28, 255, 70, 0.8);
+}
+
+.timeline-item.right .timeline-dot {
+  left: -12.5px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: #1a1a1a;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #1cff46;
+}
+
+.timeline-item.right .timeline-content {
+  border-left: none;
+  border-right: 4px solid #1cff46;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-date {
+  display: inline-block;
+  color: #1cff46;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  background-color: rgba(28, 255, 70, 0.1);
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.timeline-title {
+  color: white;
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.timeline-description {
+  color: #cccccc;
+  margin: 0;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.timeline-details {
+  color: #999999;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments for timeline */
+@media screen and (max-width: 992px) {
+  .timeline-line {
+    left: 30px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 20px;
+    left: 0 !important; /* Ensure all items align left */
+    margin-right: 0; /* Remove any right margin */
+  }
+  
+  .timeline-item.right {
+    left: 0;
+  }
+  
+  .timeline-dot {
+    left: 18px;
+    right: auto;
+  }
+  
+  .timeline-item.right .timeline-dot {
+    left: 18px;
+  }
+  
+  .timeline-content {
+    border-left: 4px solid #1cff46;
+    border-right: none !important; /* Remove right border for all items */
+    width: 100%; /* Ensure content doesn't overflow */
+    box-sizing: border-box;
+  }
+  
+  .timeline-item.right .timeline-content {
+    border-right: none;
+    border-left: 4px solid #1cff46;
+  }
+  
+  /* Fix container overflow */
+  .timeline-container {
+    overflow-x: hidden;
+    padding-right: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .timeline-content {
+    padding: 15px 20px;
+    max-width: 100%; /* Ensure content doesn't overflow */
+  }
+  
+  .timeline-title {
+    font-size: 1.3rem;
+  }
+  
+  .timeline-description {
+    font-size: 1rem;
+  }
+  
+  .timeline-details {
+    font-size: 0.9rem;
+  }
+  
+  .timeline-date {
+    font-size: 0.9rem;
+  }
+  
+  /* Additional fixes for smallest screens */
+  .timeline-item {
+    padding-right: 0;
+    padding-left: 60px; /* Slightly reduce left padding */
+  }
+  
+  .education-timeline .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
