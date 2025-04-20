@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
           });
   });
-  // Add this to your existing script.js file
+  // Update the touch device handling for project overlays
   document.addEventListener("DOMContentLoaded", function() {
     // Check if device is touch-enabled
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -263,8 +263,15 @@ document.addEventListener("DOMContentLoaded", function () {
           // If the overlay is not fully visible yet, show it and prevent link navigation
           if (!this.classList.contains('active-overlay')) {
             e.preventDefault();
+            e.stopPropagation();
+            
             // Remove active class from all other containers
-            projectContainers.forEach(c => c.classList.remove('active-overlay'));
+            projectContainers.forEach(c => {
+              if (c !== this) {
+                c.classList.remove('active-overlay');
+              }
+            });
+            
             // Add active class to current container
             this.classList.add('active-overlay');
           } else if (e.target !== link) {

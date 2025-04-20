@@ -275,11 +275,14 @@ html {
   z-index: 2;
   padding: 15px;
   text-align: center;
+  pointer-events: none; /* Ensure overlay doesn't interfere with clicks */
 }
 
-.project .col-12 .project-container:hover .project-overlay {
+.project .col-12 .project-container:hover .project-overlay,
+.project .col-12 .project-container.active-overlay .project-overlay {
   opacity: 1;
   backdrop-filter: blur(3px);
+  pointer-events: auto; /* Re-enable pointer events when visible */
 }
 
 .project .col-12 .project-overlay h3 {
@@ -321,7 +324,10 @@ html {
 
 .project .col-12 .project-container:hover .project-overlay h3,
 .project .col-12 .project-container:hover .project-overlay p,
-.project .col-12 .project-container:hover .project-overlay .btn-view-project {
+.project .col-12 .project-container:hover .project-overlay .btn-view-project,
+.project .col-12 .project-container.active-overlay .project-overlay h3,
+.project .col-12 .project-container.active-overlay .project-overlay p,
+.project .col-12 .project-container.active-overlay .project-overlay .btn-view-project {
   transform: translateY(0);
 }
 
@@ -336,50 +342,29 @@ html {
   filter: brightness(0.7);
 }
 
-/* Media queries for better responsive behavior */
-@media (max-width: 768px) {
-  .project .col-12 .project-overlay {
-    padding: 10px;
-  }
-  
-  .project .col-12 .project-overlay p {
-    margin-bottom: 15px;
-    max-width: 95%;
-  }
-}
-
-@media (max-width: 576px) {
-  .project .col-12 .project-overlay h3 {
-    margin-bottom: 10px;
-  }
-  
-  .project .col-12 .project-overlay p {
-    margin-bottom: 12px;
-  }
-  
-  .project .col-12 .project-overlay .btn-view-project {
-    padding: 6px 15px;
-  }
-}
-
-/* Touch device improvements */
+/* Remove the problematic touch device styles that were showing the overlay */
 @media (hover: none) {
   .project .col-12 .project-overlay {
-    opacity: 0.9;
+    opacity: 0;
     background: rgba(0, 0, 0, 0.8);
-    transform: translateY(70%);
-    height: 50%;
+    transform: translateY(0);
+    height: 100%;
   }
   
   .project .col-12 .project-overlay h3,
   .project .col-12 .project-overlay p,
   .project .col-12 .project-overlay .btn-view-project {
-    transform: translateY(0);
+    transform: translateY(20px);
   }
   
-  .project .col-12 .project-container:active .project-overlay {
+  .project .col-12 .project-container.active-overlay .project-overlay {
+    opacity: 1;
+  }
+  
+  .project .col-12 .project-container.active-overlay .project-overlay h3,
+  .project .col-12 .project-container.active-overlay .project-overlay p,
+  .project .col-12 .project-container.active-overlay .project-overlay .btn-view-project {
     transform: translateY(0);
-    height: 100%;
   }
 }
 @keyframes scrollText {
